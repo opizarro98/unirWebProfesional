@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { CarrucelComponent } from './carrucel/carrucel.component';
 import { ServiciosComponent } from './servicios/servicios.component';
@@ -13,14 +13,14 @@ const routes: Routes = [
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'contacto', component: ContactoComponent },
-  { path: 'Inicio', redirectTo: '/carrucel', pathMatch: 'full' }, 
+  { path: 'Inicio', redirectTo: '/carrucel', pathMatch: 'full' },
 ];
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,CarrucelComponent, ServiciosComponent, ContactoComponent, NosotrosComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, CarrucelComponent, ServiciosComponent, ContactoComponent, NosotrosComponent, FooterComponent, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -32,8 +32,8 @@ export class AppComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.isNavbarFixed = offset > 180; 
-    this.isNavbarStatic = offset < 50; 
+    this.isNavbarFixed = offset > 180;
+    this.isNavbarStatic = offset < 50;
   }
 
   title = 'KALAgym';

@@ -1,28 +1,17 @@
 <div class="container marketing mx-auto my-5">
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <img class="rounded-circle mb-3" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-                <h2 class="text-center">Servicio 1</h2>
-            </div>
-            <p class="text-justify">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <img class="rounded-circle mb-3" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-                <h2 class="text-center">Servicio 2</h2>
-            </div>
-            <p class="text-justify">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <img class="rounded-circle mb-3" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-                <h2 class="text-center">Servicio 3</h2>
-            </div>
-            <p class="text-justify">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+  <h1 class="text-center mb-4">SERVICIOS Y ACTIVIDADES</h1>
+  <br>
+  <div class="row">
+    <div class="col-lg-6" *ngFor="let service of servicios; let i = index">
+      <div class="servicio-container">
+        <!-- Contenido de tu servicio -->
+        <img class="servicio-imagen rounded-circle" [src]="service.image" alt="">
+        <div class="servicio-texto">
+          <h2 class="text-center">{{ service.title }}</h2>
+          <p class="text-justify">{{ service.description }}</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.row -->
 </div><!-- /.container -->

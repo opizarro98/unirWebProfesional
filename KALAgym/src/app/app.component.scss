@@ -1,9 +1,36 @@
-@media screen and (min-width:777px){
-    .nav-link {
-      padding:18px 0;
-      min-width:120px;
-    }
-    .navbar {
-      padding: 0
-    }
-  }
+.navbar {
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navbar-static {
+  background-color: #333; /* Color estático del menú sin scroll */
+  opacity: 1;
+}
+
+.navbar-opaque {
+  background-color: rgba(51, 51, 51, 0.9); /* Color con opacidad */
+  opacity: 1;
+}
+
+.fixed-top {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+//Agregar espacio entre los elementos del menú 
+.navbar-nav .nav-item {
+  margin-right: 50px; 
+}
+
+//Para evitar que el último elemento tenga margen a la derecha 
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+// Estilos para ajustar el campo de búsqueda hacia la derecha 
+.navbar-collapse .form-inline {
+  margin-left: auto;
+}
+
+

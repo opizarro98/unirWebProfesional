@@ -1,49 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav [ngClass]="{
+  'navbar': true,
+  'navbar-expand-lg': true,
+  'navbar-dark': true,
+  'bg-dark': isNavbarStatic,
+  'navbar-static': isNavbarStatic,
+  'navbar-opaque': !isNavbarStatic && isNavbarFixed,
+  'fixed-top': isNavbarFixed
+}">
   <div class="container">
-    <a class="navbar-brand" href="#"
-      ><img src="../assets/image/logobn.png" alt="KALA gym logo" width="100" height="20"
-    /></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarsExample07"
-      aria-controls="navbarsExample07"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <a class="navbar-brand" href="#">
+      <img src="../assets/image/logobn.png" alt="KALA gym logo" width="100" height="20" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+      aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarsExample07">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#"></a>
+          <a class="nav-link" href="#carrucel">{{txtmenu1}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{ txtmenu1 }}</a>
+          <a class="nav-link" href="#nosotros">{{txtmenu2}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{ txtmenu2 }}</a>
+          <a class="nav-link" href="#servicios">{{txtmenu3}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{ txtmenu3 }}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">{{ txtmenu4 }}</a>
+          <a class="nav-link" href="#contacto">{{txtmenu4}}</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-md-0">
-        <input
-          class="form-control"
-          type="text"
-          placeholder="Buscar"
-          aria-label="Search"
-        />
+      <form class="form-inline my-2 my-md-0 ml-auto" >
+        <input class="form-control" type="text" placeholder="Buscar" aria-label="Search" />
       </form>
     </div>
   </div>
 </nav>
-<app-carrucel></app-carrucel>
-<app-servicios></app-servicios>
-<app-contacto></app-contacto>
+
+
+<app-carrucel id="carrucel"></app-carrucel>
+<app-nosotros id="nosotros"></app-nosotros>
+<app-servicios id="servicios"></app-servicios>
+<app-contacto id="contacto"></app-contacto>
+<app-footer></app-footer>

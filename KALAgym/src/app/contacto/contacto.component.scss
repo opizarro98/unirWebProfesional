@@ -1,23 +1,35 @@
 .custom-form {
-    border: 2px solid transparent;
-    border-radius: 10px;
-    padding: 20px;
-    background: linear-gradient(to bottom right, black, red); /* Fondo degradado */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
-  }
-  
-  /* Estilos para evitar pérdida de visibilidad del texto */
-  .custom-form label {
-    color: white; /* Color del texto */
-  }
-  
-  .custom-form input,
-  .custom-form textarea,
-  .custom-form button {
-    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo de los campos de entrada y botón */
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
-  
+  border: 3px solid transparent;
+  border-image: linear-gradient(to right, black, red);
+  border-image-slice: 1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.custom-form label {
+  color: black; 
+}
+
+.custom-form input,
+.custom-form textarea {
+  background: transparent;
+  border: 1px solid black; 
+  border-radius: 3px;
+  padding:10px;
+  margin-bottom: 5px;
+  color: black; 
+}
+
+
+.custom-form button {
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  color: white;
+}
+.custom-title {
+  font-family: 'Arial', sans-serif;
+}

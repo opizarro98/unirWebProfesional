@@ -1,3 +1,14 @@
+:host {
+  display: block;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #FF0000);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+
 .servicio-container {
   border: 1px solid red; /* Borde delgado de color rojo */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Efecto de sombra con color personalizable */

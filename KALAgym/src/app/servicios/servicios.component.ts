@@ -11,10 +11,10 @@ import { Component, Input } from '@angular/core';
 export class ServiciosComponent {
   servicios = [
     // Asegúrate de tener datos aquí
-    { title: 'Servicio 1', description: 'Espacio totalmente equipado con instalaciones y entrenadores profesionales calificados.', image: "../../assets/image/pesa.gif" },
-    { title: 'Servicio 2', description: 'Descripción del servicio 2', image: "../../assets/image/balance.gif" },
-    { title: 'Servicio 4', description: 'Descripción del servicio 2', image: "../../assets/image/doctor.gif" },
-    { title: 'Servicio 4', description: 'Descripción del servicio 2', image: "../../assets/image/fuerte.gif" },
+    { title: 'KALAGYM', description: 'Espacio totalmente equipado con instalaciones y entrenadores profesionales calificados.', image: "../../assets/image/pesa.gif" },
+    { title: 'KALATRACK', description: 'Tratamiento terapéutico osteopático para pacientes con molestias del día a día.', image: "../../assets/image/balance.gif" },
+    { title: 'KALAPROS', description: 'Grupo de especialistas externos y  calificados, para garantizar una atención esoecializada y completa.', image: "../../assets/image/doctor.gif" },
+    { title: 'TRAINING', description: 'Entrenamiento especializado para pacientes geriátricospropioceptivo.', image: "../../assets/image/fuerte.gif" },
     // ...
   ];
 }
